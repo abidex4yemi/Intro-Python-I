@@ -2,11 +2,17 @@
 
 # YOUR CODE HERE
 
-# Read a number from the keyboard
-num = input("Enter a number: ")
-num = int(num)
 
-# Print out "Even!" if the number is even. Otherwise print "Odd"
+def check_even_or_odd(num):
+    if num % 2 == 0:
+        return f"Number: {num} is even!"
+    else:
+        return f"Number: {num} is odd!"
+
 
 # YOUR CODE HERE
+# Read a number from the keyboard
+num = int(input("Enter a number: "))
 
+# Print out "Even!" if the number is even. Otherwise print "Odd"
+print(check_even_or_odd(num))
