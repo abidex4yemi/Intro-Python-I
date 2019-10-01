@@ -22,3 +22,28 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+
+def get_my_calender():
+    user_input = sys.argv
+
+    if len(user_input) == 1:
+        today = datetime.today()
+        current_month_calender = calendar.month(today.year, today.month)
+        print(current_month_calender)
+    elif len(user_input) == 2:
+        month = int(user_input[1])
+        today = datetime.today()
+        current_month_calender = calendar.month(today.year, month)
+        print(current_month_calender)
+    elif len(user_input) == 3:
+        month = int(user_input[1])
+        year = int(user_input[2].strip("[]"))
+        current_month_calender = calendar.month(year, month)
+        print(current_month_calender)
+    else:
+        print("Invalid argument: follow specified format below")
+        print("14_cal.py month [year]")
+
+
+print(get_my_calender())
